@@ -1,0 +1,63 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #BDCEDB;
+  color: #000;
+  font-family: Times New Roman;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.button {
+  border-radius: 25px;
+  border: none;
+  height: 50px;
+  width: 105px;
+  background: white;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  box-shadow: 5px 7px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.front {
+  position: absolute;
+  z-index: 2;
+  width: 50px;
+  background: white;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+.back {
+  z-index: 1;
+  background: #64C760;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.button:active {
+  background-color: #64C760;
+  border: 2px solid #fff;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  box-shadow: 4px -8px 12px 0 rgba(0, 0, 0, 0.1);
+}
